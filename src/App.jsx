@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './index.css';
+import DashboardLayout from './components/layout/DashboardLayout';
+import TopHeader from './components/layout/TopHeader';
+import SummaryMetrics from './components/cards/SummaryMetrics';
+import UserMetricsPills from './components/cards/UserMetricsPills';
+import PlatformStats from './components/cards/PlatformStats';
+import DealsChart from './components/charts/DealsChart';
+import PlatformValueChart from './components/charts/PlatformValueChart';
+import UserTable from './components/tables/UserTable';
+import WorkWithPlatforms from './components/cards/WorkWithPlatforms';
+import ActionTabs from './components/ui/ActionTabs';
+import ErenRow from './components/cards/UserRow';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <DashboardLayout>
+      {/* Top Header with User Pills & Actions */}
+      <TopHeader />
+
+      {/* Summary Metrics Row */}
+      <SummaryMetrics />
+
+      {/* User Metrics Pill Row */}
+      <UserMetricsPills />
+
+      {/* Main Two Column Layout */}
+      <div className="flex gap-5">
+        {/* Left Column - Platform Data */}
+        <div className="w-[520px] flex-shrink-0 space-y-4">
+          {/* Platform Stats & Deals Chart Row */}
+          <div className="flex gap-4">
+            <PlatformStats />
+            <DealsChart />
+          </div>
+
+          {/* Platform Value Chart */}
+          <PlatformValueChart />
+        </div>
+
+        {/* Right Column - User Data & Sales */}
+        <div className="flex-1 space-y-4">
+          {/* User Table */}
+          <UserTable />
+
+          {/* Action Tabs */}
+          <ActionTabs />
+
+          {/* Work with Platforms */}
+          <WorkWithPlatforms />
+
+          {/* Bottom User Row - Eren */}
+          <ErenRow />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </DashboardLayout>
+  );
 }
 
-export default App
+export default App;
