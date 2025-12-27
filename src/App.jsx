@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import './index.css';
+import LandingPage from './components/layout/LandingPage';
 import DashboardLayout from './components/layout/DashboardLayout';
 import TopHeader from './components/layout/TopHeader';
 import SummaryMetrics from './components/cards/SummaryMetrics';
@@ -12,6 +14,12 @@ import ActionTabs from './components/ui/ActionTabs';
 import ErenRow from './components/cards/UserRow';
 
 function App() {
+  const [showDashboard, setShowDashboard] = useState(false);
+
+  if (!showDashboard) {
+    return <LandingPage onOpenDashboard={() => setShowDashboard(true)} />;
+  }
+
   return (
     <DashboardLayout>
       {/* Top Header with User Pills & Actions */}
