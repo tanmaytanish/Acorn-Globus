@@ -47,7 +47,7 @@ const PlatformStats = () => {
     };
 
     return (
-        <div className="bg-gray-100 rounded-2xl p-4 flex-1">
+        <div className="bg-gray-100 rounded-2xl p-3 sm:p-4 flex-1">
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
                 <button className="flex items-center gap-1 text-gray-600">

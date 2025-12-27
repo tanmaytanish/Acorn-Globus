@@ -23,12 +23,12 @@ function App() {
       {/* User Metrics Pill Row */}
       <UserMetricsPills />
 
-      {/* Main Two Column Layout */}
-      <div className="flex gap-5">
+      {/* Main Responsive Grid */}
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 min-h-0">
         {/* Left Column - Platform Data */}
-        <div className="w-[520px] flex-shrink-0 space-y-4">
+        <div className="w-full lg:w-[520px] lg:flex-shrink-0 flex flex-col gap-6 lg:gap-8 min-w-0">
           {/* Platform Stats & Deals Chart Row */}
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <PlatformStats />
             <DealsChart />
           </div>

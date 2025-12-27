@@ -27,8 +27,8 @@ const UserMetricsPills = () => {
     ];
 
     return (
-        <div className="bg-gray-100 rounded-full p-1 flex items-center gap-2 mb-8">
-            <div className="flex items-center gap-2 bg-white rounded-full pl-1.5 pr-6 py-1.5 border border-transparent hover:border-gray-200 hover:shadow-md hover:scale-[1.03] transition-all duration-250 cursor-pointer group">
+        <div className="bg-gray-100 rounded-full p-1 flex items-center gap-2 mb-8 overflow-x-auto scrollbar-hide">
+            <div className="flex-shrink-0 flex items-center gap-2 bg-white rounded-full pl-1.5 pr-6 py-1.5 border border-transparent hover:border-gray-200 hover:shadow-md hover:scale-[1.03] transition-all duration-250 cursor-pointer group">
                 <div className="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center group-hover:bg-black group-hover:scale-110 transition-all">
                     <span className="text-white text-[10px] font-semibold">A</span>
                 </div>
@@ -37,7 +37,7 @@ const UserMetricsPills = () => {
             </div>
 
             {/* User 2 - M (green, border background) */}
-            <div className="flex items-center gap-2 bg-white rounded-full pl-1.5 pr-4 py-1.5 ml-3 border border-transparent hover:border-gray-200 hover:shadow-md hover:scale-[1.03] transition-all duration-250 cursor-pointer group">
+            <div className="flex-shrink-0 flex items-center gap-2 bg-white rounded-full pl-1.5 pr-4 py-1.5 ml-3 border border-transparent hover:border-gray-200 hover:shadow-md hover:scale-[1.03] transition-all duration-250 cursor-pointer group">
                 <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center group-hover:bg-green-600 group-hover:scale-110 transition-all">
                     <span className="text-white text-[10px] font-semibold">M</span>
                 </div>
@@ -46,7 +46,7 @@ const UserMetricsPills = () => {
             </div>
 
             {/* User 3 - E (yellow, no border) */}
-            <div className="flex items-center gap-2 ml-6 hover:scale-[1.03] transition-transform cursor-pointer group">
+            <div className="flex-shrink-0 flex items-center gap-2 ml-6 hover:scale-[1.03] transition-transform cursor-pointer group">
                 <div className="w-6 h-6 rounded-full bg-amber-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <span className="text-white text-[10px] font-semibold">E</span>
                 </div>
@@ -55,7 +55,7 @@ const UserMetricsPills = () => {
             </div>
 
             {/* User 4 - C (dark, no border) */}
-            <div className="flex items-center gap-2 ml-6 hover:scale-[1.03] transition-transform cursor-pointer group">
+            <div className="flex-shrink-0 flex items-center gap-2 ml-6 hover:scale-[1.03] transition-transform cursor-pointer group">
                 <div className="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <span className="text-white text-[10px] font-semibold">C</span>
                 </div>
@@ -64,7 +64,7 @@ const UserMetricsPills = () => {
             </div>
 
             {/* Details Button */}
-            <button className="ml-auto px-5 py-2 bg-gray-900 text-white text-sm font-medium rounded-full hover:bg-black hover:shadow-lg hover:scale-105 active:scale-95 transition-all">
+            <button className="flex-shrink-0 ml-auto px-5 py-2 bg-gray-900 text-white text-sm font-medium rounded-full hover:bg-black hover:shadow-lg hover:scale-105 active:scale-95 transition-all">
                 Details
             </button>
         </div>

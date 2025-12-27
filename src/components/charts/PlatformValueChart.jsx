@@ -34,23 +34,23 @@ const PlatformValueChart = () => {
                 </div>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
                 {/* Left Stats Panel */}
-                <div className="w-28 bg-gradient-to-br from-primary-500 to-primary-400 rounded-xl p-3 text-white shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-250 cursor-default group">
-                    <p className="text-[9px] font-medium opacity-80 mb-2 group-hover:opacity-100 transition-opacity">Average monthly</p>
-                    <div className="space-y-2">
-                        <div>
-                            <p className="text-[9px] opacity-70 group-hover:opacity-90 transition-opacity">Revenue</p>
-                            <p className="text-lg font-bold group-hover:scale-105 origin-left transition-transform">$18,552</p>
-                        </div>
-                        <div>
-                            <p className="text-[9px] opacity-70 group-hover:opacity-90 transition-opacity">Leads</p>
-                            <p className="text-sm font-semibold group-hover:scale-105 origin-left transition-transform">373 <span className="text-[9px] opacity-70">97/276</span></p>
-                        </div>
-                        <div>
-                            <p className="text-[9px] opacity-70 group-hover:opacity-90 transition-opacity">Win/loss</p>
-                            <p className="text-sm font-semibold group-hover:scale-105 origin-left transition-transform">16% <span className="text-[9px] opacity-70">51/318</span></p>
-                        </div>
+                <div className="sm:w-28 flex flex-row sm:flex-col gap-4 sm:gap-2 sm:items-start justify-between sm:justify-start bg-gradient-to-br from-primary-500 to-primary-400 rounded-xl p-3 text-white shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-250 cursor-default group">
+                    <div className="hidden sm:block">
+                        <p className="text-[9px] font-medium opacity-80 mb-2 group-hover:opacity-100 transition-opacity">Average monthly</p>
+                    </div>
+                    <div>
+                        <p className="text-[9px] opacity-70 group-hover:opacity-90 transition-opacity">Revenue</p>
+                        <p className="text-sm sm:text-lg font-bold group-hover:scale-105 origin-left transition-transform">$18,552</p>
+                    </div>
+                    <div>
+                        <p className="text-[9px] opacity-70 group-hover:opacity-90 transition-opacity">Leads</p>
+                        <p className="text-xs sm:text-sm font-semibold group-hover:scale-105 origin-left transition-transform whitespace-nowrap">373 <span className="text-[9px] opacity-70">97/276</span></p>
+                    </div>
+                    <div>
+                        <p className="text-[9px] opacity-70 group-hover:opacity-90 transition-opacity whitespace-nowrap">Win/loss</p>
+                        <p className="text-xs sm:text-sm font-semibold group-hover:scale-105 origin-left transition-transform">16%</p>
                     </div>
                 </div>
 

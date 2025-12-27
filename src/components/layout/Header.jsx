@@ -13,8 +13,8 @@ const Header = ({ onMenuClick }) => {
                     <Menu className="w-5 h-5 text-gray-600" />
                 </button>
 
-                {/* Search Bar */}
-                <div className="relative">
+                {/* Search Bar - Hidden on mobile to prevent overlap */}
+                <div className="relative hidden md:block">
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                     <input
                         type="text"
@@ -32,8 +32,8 @@ const Header = ({ onMenuClick }) => {
             <div className="flex items-center gap-3">
                 {/* Custom White Capsule with Menu and Avatar */}
                 <div className="flex items-center gap-5 bg-white border border-gray-100 rounded-full pl-5 pr-1.5 py-1.5 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-250 group">
-                    {/* Menu Icon */}
-                    <button className="text-gray-900 hover:text-primary-500 transition-colors">
+                    {/* Menu Icon - Hidden on mobile as we have a dedicated sidebar toggle */}
+                    <button className="hidden md:block text-gray-900 hover:text-primary-500 transition-colors">
                         <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="20" height="2" rx="1" fill="currentColor" />
                             <rect y="6" width="20" height="2" rx="1" fill="currentColor" />
